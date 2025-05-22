@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Enter filename"
+
+read file
+
+
+
+
+
+
+sed '/^$/d' $file
