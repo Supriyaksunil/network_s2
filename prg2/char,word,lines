@@ -1,0 +1,12 @@
+
+#!/bin/bash
+echo "Enter file name"
+read filename
+
+c=`cat "$filename" | wc -c`
+w=`cat "$filename" | wc -w`
+l=`grep -c "." "$filename"`
+echo "No. of characters,$c"
+echo "no. of words,$w"
+echo "No. of lines,$l"
+
