@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Enter the number to reverse:"
+read num
+n=$num
+if [ $num -ge 10000 -a $num -le 99999 ]
+then
+        result=0
+        while [ $num -ne 0 ]
+        do
+                result=$((result * 10))
+                last_dig=$((num%10))
+                result=$((result + last_dig))
+                num=$((num/10))
+        done
+        echo "$result"
+fi
