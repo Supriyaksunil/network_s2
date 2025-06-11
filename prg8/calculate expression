@@ -1,0 +1,12 @@
+#!/bin/bash
+
+a=$1
+b=$2
+c=$3
+d=$4
+
+# Correct the expr syntax and spacing
+ans=$(expr "$a" \* 20 - "$b" \* 2 + "$c" / "$d")
+
+echo "calculate $a $b $c $d"
+echo "The answer is $ans"
