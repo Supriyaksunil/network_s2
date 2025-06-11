@@ -1,0 +1,25 @@
+#!/bin/bash
+echo "Prime numbers between 50 and 100"
+i=50
+
+while [[ $i -lt 100 ]]
+do
+        flag=1
+        j=2
+        while [[ $j -lt $i ]]
+        do
+                rem=$((i%j))
+                if [[ $rem -eq 0 ]]
+                then
+                        flag=0
+                        break
+                fi
+                j=$((j+1))
+        done
+        if [[ flag -eq 1 ]]
+        then
+                echo "$i"
+        fi
+        i=$((i+1))
+done
+
