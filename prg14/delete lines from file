@@ -1,0 +1,5 @@
+#!/bin/bash
+read -p "Enter filename:" file
+read -p "Enter starting range:" x
+read -p "Enter ending range:" y
+sed -i "${x},${y}d" "$file"
