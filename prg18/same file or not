@@ -1,0 +1,11 @@
+#!/bin/bash
+read -p "Enter file1:" file1
+read -p "Enter file2:" file2
+if cmp -s "$file1" "$file2"
+then
+        echo "Same files"
+else
+        echo "Not same file"
+fi
+
+
