@@ -1,0 +1,23 @@
+#!/bin/bash
+read -p "Enter file name" file
+read -p "Old string:" old
+read -p "New string:" new
+echo ".....opening file....."
+cat $file
+echo "Do you want to replace the old string in all lines(y/n)"
+read yn
+if [[ $yn == 'Y' || $yn == 'y' ]]
+then
+        sed -i "s/$old/$new/g" "$file"
+        cat $file
+elif [[ $yn == 'N' || $yn == 'n' ]]
+then
+        read -p "Enter starting range:" start
+        read -p "Enter ending range:" end
+        end=$((start+end-1))
+        sed -i "${start},${end} s/$old/$new/g" "$file"
+        cat $file
+fi
+
+
+
