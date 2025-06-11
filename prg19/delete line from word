@@ -1,0 +1,10 @@
+#!/bin/bash
+read -p "Enter file name:" file
+read -p "Enter word to delete the line:" word
+if [[ $word != ' ' ]]
+then
+        sed "/$word/d" "$file"
+else
+        echo "Invalid word"
+        cat $file
+fi
